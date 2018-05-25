@@ -1,0 +1,49 @@
+var playing = false;
+var score = 0;
+
+var timer = 0;
+
+document.getElementById("start-reset").onclick = function(){
+    //start reset button clicked function
+    
+    //checking we playing or not
+    if(playing == true){
+        location.reload(); //refresh the page
+    }
+    
+    else{//not playing
+        playing = true;
+        score = 0;
+        document.getElementById("score-value").innerHTML = score;
+        document.getElementById("start-reset").innerHTML = "Reset Game";
+        hide("game-over");
+        show("time-remaining");
+        timer = 6;
+        document.getElementById("time-value").innerHTML = timer;
+        startTimer();
+    }
+    
+}
+
+function startTimer(){
+    var action = setInterval(function(){
+       timer -= 1;
+        document.getElementById("time-value").innerHTML = timer;
+        if(timer == 0){
+            clearInterval(action);
+            document.getElementById("game-over").innerHTML = "<p> GAME OVER! </p> <p> Your Score is " + score + ".</p>";
+            show("game-over");
+            hide("time-remaining");
+            playing = false;
+            document.getElementById("start-reset").innerHTML = "Start game";
+        }   
+    }, 1000);
+}
+
+function show(id){
+    document.getElementById(id).style.display = "block";
+}
+
+function hide(id){
+    document.getElementById(id).style.display = "none";
+}

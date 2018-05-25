@@ -1,0 +1,134 @@
+body{
+    height: 100%;
+    background: radial-gradient(circle, #fff, #ccc);
+}
+
+.text-center{
+    text-align: center;
+}
+
+#container{
+    position: relative;
+    box-sizing: border-box;
+    height: 440px;
+    width: 590px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 100px auto;
+    background-color: #9DD2EA;
+    box-shadow: 0px 4px 0px 0px #009DE4;
+}
+
+#score{
+    background-color: #F1FF92;
+    color: #888E5F;
+/*    border-bottom: solid 4px #9DA853*/
+    box-shadow: 0px 4px #9DA853;
+    position: absolute;
+    right: 15px;
+    padding: 11px;
+}
+
+#correct, #wrong{
+    position: absolute;
+    background-color: #42E252;
+    color: #fff;
+    padding: 11px;
+    left: 245px;
+    display: none;
+}
+
+#wrong{
+    background-color: #DE401A;
+}
+
+#question{
+    width: 450px;
+    height: 150px;
+    margin: 50px auto 10px auto;
+    background: #9DA0EA;
+    box-shadow: 0px 4px #535AA8;
+    font-size: 100px;
+    font-family: cursive, sans-serif;
+    line-height: 150px;
+}
+
+#information{
+    width: 450px;
+    height: 50px;
+    margin: 10px auto;
+    background: #B481D9;
+    box-shadow: 0px 4px #8153A8;
+    line-height: 50px;
+}
+
+#choice-container{
+    width: 450px;
+    height: 100px;
+    margin: 3px auto;
+}
+
+.choice{
+    width: 85px;
+    height: 85px;
+    background: #fff;
+    float: left;
+    margin-right: 36.5px;
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0,0,0,0.2);
+    line-height: 85px;
+    cursor: pointer;
+    position: relative;
+}
+
+.choice:active, #start-reset:active{
+    top: 4px;
+    box-shadow: 0 0;
+    background: #C881E9;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+#box4{
+    margin-right: 0;
+}
+
+#start-reset{
+    width: 100px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0px auto;
+    line-height: 38px;
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+#time-remaining{
+    position: absolute;
+    background: #AFE64B;
+    bottom: 8px;
+    right: 20px;
+    height: 38px;
+    width: 165px;
+    line-height: 38px;
+    border-radius: 3px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+#game-over{
+    width: 500px;
+    height: 200px;
+    background: linear-gradient(#F3C76B, #F3746C);
+    color: #fff;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    position: absolute;
+    left: 45px;
+    top: 100px;
+    z-index: 2;
+    display: none;
+}
